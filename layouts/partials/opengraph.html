@@ -2,6 +2,7 @@
 {{- with .Params.description }}
   {{- $summary = (. | truncate 160) }}
 {{- end }}
+{{- $lang := .Site.LanguageCode }}
 {{- $site := .Site.Title }}
 {{- $title := .Title }}
 {{- $params := .Site.Params }}
@@ -15,7 +16,7 @@
 {{- with .Params.image }}
   {{- $image = absURL (printf "images/%s" .)  }}
 {{- end }}
-<meta property = 'og:locale' content = 'en_US' />
+<meta property = 'og:locale' content = '{{ $lang }}' />
 {{- if .IsHome }}
 <meta property="og:type" content="website">
 {{- else }}
