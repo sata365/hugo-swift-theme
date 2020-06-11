@@ -24,7 +24,9 @@
     <h3 class = 'post_link'>
       <a href='{{ .Permalink }}'>{{ .Title  }}</a>
     </h3>
+    {{- if .Site.Params.IsShowDate }}
     <p>{{ .Date.Format "January 2, 2006" }}</p>
+    {{- end }}
     <p class = 'pale'>{{ .Summary | truncate 90 }}</p>
   </div>
 </li>
