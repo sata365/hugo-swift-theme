@@ -2,7 +2,7 @@
   {{- if .IsHome }}
   <title>{{ .Site.Title }}</title>
   {{- else }}
-  <title>{{ with .Title }}{{ humanize . }} | {{ end }}{{ .Site.Title }}</title>
+  <title>{{ with .Title }}{{ . }} | {{ end }}{{ .Site.Title }}</title>
   {{- end }}
   <meta charset='utf-8'>
   {{ hugo.Generator }}
